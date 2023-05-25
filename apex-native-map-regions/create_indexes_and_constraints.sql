@@ -1,10 +1,4 @@
 /*
-|| Script:  Create_CHARGING_POINTS.sql
-|| Purpose: Creates all related objects for table DOT_DISADVANTAGE_LAYERS
-|| Author:  Jim Czuprynski (Zero Defect Computing, Inc.)
-*/
-
-/*
 || Script:  create_indexes_and_constraints.sql
 || Purpose: Creates all remaining database objects
 || Author:  Jim Czuprynski (Zero Defect Computing, Inc.)
