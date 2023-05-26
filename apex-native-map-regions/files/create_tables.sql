@@ -7,20 +7,19 @@
 DROP TABLE IF EXISTS hol23c.charging_points;
 CREATE TABLE IF NOT EXISTS hol23c.charging_points (	
    cp_id           NUMBER(8,0)
-	,cp_name         VARCHAR2(60) NOT NULL
-	,cp_address      VARCHAR2(40) NOT NULL
-	,cp_city         VARCHAR2(40) NOT NULL
-	,cp_state_abbr   VARCHAR2(2) NOT NULL
-	,cp_zip_code     CHAR(5) NOT NULL
-	,cp_status       CHAR(3) NOT NULL
-	,cp_bus_type     VARCHAR2(3) NOT NULL
-	,cp_chg_type     VARCHAR2(4) NOT NULL
-	,cp_chg_avail    VARCHAR2(4) NOT NULL
-	,cp_potentiality NUMBER(8,6) 
-	,gc_geometry     SDO_GEOMETRY)  
-     VARRAY GC_GEOMETRY.SDO_ELEM_INFO STORE AS SECUREFILE LOB 
-     VARRAY GC_GEOMETRY.SDO_ORDINATES STORE AS SECUREFILE LOB;
-;
+  ,cp_name         VARCHAR2(60) NOT NULL
+  ,cp_address      VARCHAR2(40) NOT NULL
+  ,cp_city         VARCHAR2(40) NOT NULL
+  ,cp_state_abbr   VARCHAR2(2) NOT NULL
+  ,cp_zip_code     CHAR(5) NOT NULL
+  ,cp_status       CHAR(3) NOT NULL
+  ,cp_bus_type     VARCHAR2(3) NOT NULL
+  ,cp_chg_type     VARCHAR2(4) NOT NULL
+  ,cp_chg_avail    VARCHAR2(4) NOT NULL
+  ,cp_potentiality NUMBER(8,6) 
+  ,gc_geometry     SDO_GEOMETRY)
+  VARRAY GC_GEOMETRY.SDO_ELEM_INFO STORE AS SECUREFILE LOB 
+  VARRAY GC_GEOMETRY.SDO_ORDINATES STORE AS SECUREFILE LOB;
 
 DROP TABLE IF EXISTS hol23c.dot_disadvantage_layers;
 CREATE TABLE IF NOT EXISTS hol23c.dot_disadvantage_layers (	
@@ -109,7 +108,6 @@ CREATE TABLE IF NOT EXISTS hol23c.dot_disadvantage_layers (
 , shape_leng    NUMBER 
 , shape_area    NUMBER 
 , count         NUMBER 
-, geom SDO_GEOMETRY
-   ) TABLESPACE DATA  
-     VARRAY GEOM.SDO_ELEM_INFO STORE AS SECUREFILE LOB 
-     VARRAY GEOM.SDO_ORDINATES STORE AS SECUREFILE LOB;
+, geom SDO_GEOMETRY) 
+VARRAY GEOM.SDO_ELEM_INFO STORE AS SECUREFILE LOB 
+VARRAY GEOM.SDO_ORDINATES STORE AS SECUREFILE LOB;
