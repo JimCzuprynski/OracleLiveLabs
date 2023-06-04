@@ -1,5 +1,12 @@
 # Grabbing Live Wires: Plotting EV Charging Points with APEX Native Map Regions
 
+## Summary
+This LiveLab session focuses on a real-world business problem: how to strategically place battery-electric vehicle (EV) charging stations to conform to federal government guidelines to insure that least 40% of the  least-advantaged areas of the U.S. State of Wisconsin are guaranteed their share of public funding for rebuilding the nation's electrical infrastructure.
+
+We will be using publicly-available data to plot which potential and existing EV chargers will satisfy the target of serving the 40% disadvantaged communities (DACs) based on data compiled through the US Department of Transportation (DOT). DACs are individual census tracts which contain between 1000 - 7000 people, so they vary dramatically in size based on population; a large city like Milwaukee, WI will have dozens of DACs, while a smaller community like Stevens Point, WI will have only a handful.
+
+The database tables we will populate contain dozens of variables, including the geospatial boundaries of each DAC as well as the latitude and longitude of actual and potential EV chargers. Once those tables are populated, we will construct an Application Express (APEX) workspace, import a sample APEX application, and then explore and visualize geospatial attributes of our datasets with Native Map Region features. We will also employ Oracle Spatial functions to experiment with satisfying the 40% DAC coverage requirement for EV charging point placement based on the proximity of charging points to DAC boundaries.
+
 ## Introduction
 This lab will show you how to log in to your pre-created compute instance running on Oracle Cloud.
 
@@ -97,7 +104,6 @@ Your options are:
 If you are unable to SSH into the compute instance, check out the troubleshooting tips below.
 
 You may now **proceed to the next lab**.
-
 
 ## Acknowledgements
 * **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
