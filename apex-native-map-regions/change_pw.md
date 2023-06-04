@@ -51,7 +51,7 @@ This lab assumes you have:
 
     SQL>
 		```
-    ![Connect to the database](images/connect-db-sysdba1.png " ")
+    ![Connect to the database](../images/connect-db-sysdba1.png " ")
 
 4. Now change your container to your pluggable database. If your pluggable database has a different name, make sure to change it in the command below.
     ```
@@ -61,7 +61,7 @@ This lab assumes you have:
 
     SQL>
 		```
-    ![Change to PDB](images/alter-session1.png " ")
+    ![Change to PDB](../images/alter-session1.png " ")
 
 5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace new\_password\_here to your new password. Throughout this workshop, we will use the **Welcome123** password.
     ```
@@ -85,7 +85,7 @@ Version 23.2.0.0.0
 [FREE:oracle@hol23cfdr:~]$
 		```
 
-    ![Exit](images/exit1.png " ")
+    ![Exit](images/exit1.png)
 
 ## Task 2: Starting ORDS
 
@@ -99,10 +99,14 @@ Version 23.2.0.0.0
 
     **NOTE:** You must leave this terminal window open and keep the process running. Closing either will stop ORDS from running, and you will not be able to access other applications that are used in this lab.
 
-    ![Start ORDS](images/ords1.png " ")
+    ![Start ORDS](images/ords1.png)
 
 
-2. You may now proceed to the next lab.
+2. To confirm ORDS is running, you can run the ps -ef | grep java command, as shown below. Your results may be slightly different, but as long as you see one java process running and ORDS is mentioned in the results, it is running.
+    
+    ![Verify ORDS](images/confirm_ords.png)
+
+3. You may now proceed to the next lab.
 
 ## Learn More
 
@@ -111,4 +115,4 @@ Version 23.2.0.0.0
 ## Acknowledgements
 * **Author** - Kaylien Phan, William Masdon
 * **Contributors** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
-* **Last Updated By/Date** - Jim Czuprynski, Zero Defect Computing, May 2023
+* **Last Updated By/Date** - Jim Czuprynski, Zero Defect Computing, June 2023

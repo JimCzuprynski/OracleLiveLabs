@@ -106,5 +106,6 @@ If you are unable to SSH into the compute instance, check out the troubleshootin
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-* **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
-* **Last Updated By/Date** - Jim Czuprynski, May 2023
+* **Author** - Kaylien Phan, William Masdon, Jim Czuprynski
+* **Contributors** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
+* **Last Updated By/Date** - Jim Czuprynski, June 2023
