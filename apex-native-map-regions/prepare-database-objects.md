@@ -19,7 +19,48 @@ This lab assumes you have:
 - Oracle Database 23c Free Developer Release
 - Completed all previous labs successfully
 
-## Task 1: Open SQL Developer
+## Task 1: Download the schema creation and population scripts
+
+1. Click Activities in the upper left corner, then click Terminal. Select File -> New Tab since ORDS is running in your current Terminal tab.
+
+    ![Access Terminal through activities](images/activities-terminal.png)
+
+2. Go into the right directory.
+
+    ```
+    $ <copy>cd ~/examples</copy>
+    ```
+
+    ![Open directory](images/directory.png)
+
+3. Pull down the materials for setup.
+
+    ```
+    $ <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/plot-ev-charging-points-with-apex-native-map-regions/apex-mapping.zip</copy>
+    ```
+
+    ![Wget to pull materials](images/material-pulldown-setup.png)
+
+4. Unzip the file. Inside this zip file are the files to setup your schema and APEX application.
+
+    ```
+    $ <copy>unzip -o apex-mapping.zip</copy>
+    ```
+
+    <!-- ![Unzip file](images/unzip-file.png) -->
+
+    ![Unzip the file](images/unzip-file.png)
+
+5. Remove the remaining zip file after you've unzipped it.
+
+    ```
+    $ <copy>rm -rf apex-mapping.zip</copy>
+    ```
+
+    <!-- ![Remaining zip file removed](images/remove-zip.png) -->
+
+
+## Task 2: Open SQL Developer
 
 1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer. 
 
@@ -41,7 +82,7 @@ This lab assumes you have:
 
     ![Login information](images/login-connection.png)
 
-## Task 2: Create and populate database tables and related objects
+## Task 3: Create and populate database tables and related objects
 
 1. Now that you have logged into SQL Developer, let's get familiar with some of its tools and features.
 
