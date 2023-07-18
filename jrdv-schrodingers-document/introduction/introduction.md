@@ -2,6 +2,12 @@
 
 # Introduction
 
+![Logo](images/ZDCLogo.png)
+
+### Community-Contributed Workshop
+
+* **Author:** Jim Czuprynski, Oracle ACE Director, Zero Defect Computing, Inc.
+
 ## About this Workshop
 
 This LiveLab session focuses on a real-world environmental and climate issue: how to effectively plant trees in urban "heat islands" to mitigate increasing temperatures by creating shaded areas. [Recent environmental studies](https://docs.oracle.com/ReplaceThisLink.html) reveal that disadvantaged urban areas have disproportionally higher temperatures during summer months because so few trees exist; in fact, suburban areas of the same metropolitan geographies may experience temperatures as much as 20 F cooler when compared to their urban counterparts, simply because those areas have much denser shade tree coverage.
@@ -20,7 +26,7 @@ In this lab, you will learn how to:
 * Create and populate database objects in SQL Developer.
 * Create JSON Relational Duality Views (JRDVs) that overlay those database objects. 
 * Use JSON to report against and manipulate data via JRDVs without ever writing a SQL statement.
-* Visualize and analyze geospatial data with Oracle Spatial Studio capabilities.
+* Visualize and analyze geospatial data with Oracle APEX Native Map Region capabilities.
 
 ### Labs
 
@@ -29,8 +35,8 @@ In this lab, you will learn how to:
 | 1 | [Initialize the LiveLab Environment](?lab=initalize_livelabs_environment) | 10 min |
 | 2 | [Prepare Database Objects](?lab=prepare-database-objects) | 5 min |
 | 3 | [Prepare JSON Relational Duality Views (JRDVs)](?lab=prepare-jrdvs) | 5 min |
-| 4 | [Explore JRDV Features](?lab=explore-jrdvs) | 10 min |
-| * | [Visualize Geospatial Attributes](?lab=visualize-jrdvs) | 20 min |
+| 4 | [Explore JRDV Features](?lab=explore-jrdvs) | 25 min |
+| * | [Visualize Geospatial Attributes](?lab=visualize-jrdvs) | 5 min |
 {: title="Labs with Times"}
 
 Estimated Time: 50 minutes
@@ -43,6 +49,7 @@ Click [here](?lab=initalize_livelabs_environment), select **Lab 1** from the men
 
 * [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html)
 * [Oracle JSON Developer's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/23/adjsn/)
+* [Oracle JSON-Relational Duality Developer's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/23/jsnvu/)
 * [Spatial Map Visualization Developer's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/23/jimpv/)
 
 ## Acknowledgements
