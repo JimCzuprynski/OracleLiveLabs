@@ -40,7 +40,7 @@ For ease of execution of this workshop, your VM instance has been pre-configured
 
     This should take you directly to your remote desktop in a single click.
 
-    ![noVNC launch remote desktop](./images/novnc-launch-get-started-2.png "noVNC launch remote desktop ")
+    ![noVNC launch remote desktop](./images/novnc-launch-get-started-generic.png "noVNC launch remote desktop ")
 
     >**Note:**  While rare, you may see an error titled **Deceptive Site Ahead** or similar depending on your browser type as shown below.
 
