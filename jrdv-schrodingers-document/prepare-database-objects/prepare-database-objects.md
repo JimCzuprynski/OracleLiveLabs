@@ -37,7 +37,7 @@ This lab assumes you have:
 3. Pull down the materials for setup.
 
     ```
-    $ <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/schroedingers-document-json-relational-duality-views/jsonrdv.zip</copy>
+    $ <copy>wget https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/-uNLyukKajWT_ik79EXzPs3bWyhaZzSEoaclosdmQhYjZMlKoRDDMcQgmxfSbY4P/n/c4u04/b/livelabsfiles/o/partner-solutions/json-relational-duality-views-in-23c/jsonrdv.zip</copy>
     ```
 
     ![Wget to pull materials](images/material-pulldown-setup.png)
@@ -61,7 +61,7 @@ This lab assumes you have:
 
 ## Task 2: Open SQL Developer
 
-1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer. 
+1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer.
 
     ```
     $ <copy>cd /opt/sqldeveloper/</copy>
@@ -99,7 +99,7 @@ This lab assumes you have:
 - Click the button that shows a document with the small green play button on it to run the whole script.
 - If it asks you to select a connection in a popup window, choose **hol23c_freepdb1** from the drop down and then click OK.
 
-    ![Create tables](./images/create_tables.png)
+    ![Create tables](images/create_tables.png)
 
 4. You should see that all of the following actions have completed successfully:
 
@@ -114,7 +114,7 @@ This lab assumes you have:
 
 ## Learn More
 - [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html#GUID-464C045C-FBDF-417A-A20B-037D294B3BDA)
-- [Oracle SQLcl 23.2 User Guide] https://docs.oracle.com/en/database/oracle/sql-developer-command-line/23.2/
+- [Oracle SQLcl 23.2 User Guide](https://docs.oracle.com/en/database/oracle/sql-developer-command-line/23.2/)
 - [Indexing and Querying Spatial Data](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/indexing-querying-spatial-data.html)
 
 ## Acknowledgements
