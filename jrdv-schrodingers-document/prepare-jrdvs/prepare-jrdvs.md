@@ -26,29 +26,26 @@ This lab assumes:
 
     ![Opening file](images/file-open-create-jrdvs.png)
 
-2. Next, we will create three new JRDVs that we'll be using throughout the rest of this LiveLab session
+2. Next, we will create three new JRDVs that we'll be using throughout the rest of this LiveLab session:
 
-- Open the file named **create_jrdvs.sql** by clicking on the File ... Open icon. 
+- Open the file named **create_jrdvs.sql** by clicking on the *File ... Open* icon.
 - Click the button that shows a document with the small green play button on it to run the whole script.
 - If it asks you to select a connection in a popup window, choose **hol23c_freepdb1** from the drop down and then click OK.
 
     ![Create JRDVs](./images/execute-create-jrdvs.png)
 
-    You should see that the views are created. If you had created them earlier, they will simply be replaced.
+    You should see that the new JRDVs have been created. If you had created them earlier, they will simply be replaced.
 
-3. Let's view some details about the JRDVs that we just created. 
+3. Let's view some details about one of the JRDVs that we just created.
 
 - In the left-hand-side panel, click on the plus sign in front of the Views node in the tree view to expand it and reveal the JRDVs.
 - Click on the JRDV named **PLANTING_ACTIVITY_DV** to see some of the details about this object.
 
     ![View JRDV Details](./images/view-jrdvs-in-tree.png)
 
-
 - If you click on the Data tab for the JRDV, you can view the data returned as individual JSON documents. Hovering over the row will also display the JSON-formatted information in detail.
 
-
     ![Glimpse JRDV Data](./images/view-jrdvs-data-from-tab.png)
-
 
 ## Task 2: Explore JRDV Metadata
 
@@ -70,13 +67,15 @@ This lab assumes:
 
     ![JRDV Metadata Reports](./images/view-jrdv-metadata-3.png)
 
-5. Finally, the fourth query uses the **ALL_JSON_DUALITY_VIEW_LINKS** data dictionary view shows the linkages between each JRDV and its various underlying table(s).
+5. The fourth query uses the **ALL_JSON_DUALITY_VIEW_LINKS** data dictionary view shows the linkages between each JRDV and its various underlying table(s).
 
     ![JRDV Metadata Reports](./images/view-jrdv-metadata-4.png)
 
+6. The final query leverages the **DBMS_JSON_SCHEMA** package's **DESCRIBE** procdedure to display the metadata for the **TEAM_ASSIGNMENTS_DV** JRDV in JSON format. Here's an example of how that looks when executed in native SQLPlus format as well.
 
+    ![JRDV Metadata Reports](./images/view-jrdv-metadata-5.png)
 
-## Task 3: Some JRDV Eccentricities
+## Task 3: Explore Some JRDV Eccentricities
 
 This task looks at a few eccentricities you might encounter when creating your own JRDVs.
 
@@ -100,14 +99,14 @@ This task looks at a few eccentricities you might encounter when creating your o
     ```
 
 
-3. The final line in the explanation hints at what went wrong: The "leading" table in the CREATE OR REPLACE ... VIEW statement - TEAMS - is not a table that associates data between the other tables in the DDL statement. This is one of several basic requirements of constructing JRDVs when linking them together:
+3. The final line in the explanation hints at what went wrong: The "leading" table in the **CREATE OR REPLACE ... VIEW** statement - **TEAMS** - is not a table that associates data between the other tables in the DDL statement. This is one of several basic requirements of constructing JRDVs when linking them together:
 
-- If an associative table (in this case, PLANTING_SCHEDULE) is mentioned, it **must** be at the top of the list of tables constructing the JRDV.
+- If an associative table (in this case, **PLANTING_SCHEDULE**) is mentioned, it **must** be at the top of the list of tables constructing the JRDV.
 - The top-level table **must** have a primary key, which *can* be composed of more than one column.
 - The top-level table **must** have foreign key constraints to the other tables used to construct the JRDV.
 - The remaining lower-level tables **must** also have valid primary keys so that the foreign key relationships are enforceable by the top-level table; also, each primary key constraint **must** be enforced with a unique index.
 
-3. All of the necessary JRDVs have been created, so you may proceed to the next lab. 
+4. All of the necessary JRDVs have been created, so you may proceed to the next lab. 
 
 
 ## Learn More
