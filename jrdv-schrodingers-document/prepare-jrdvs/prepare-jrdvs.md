@@ -81,7 +81,7 @@ This task looks at a few eccentricities you might encounter when creating your o
 
 1. Here is an example of a **CREATE JSON RELATIONAL DUALITY VIEW** statement that appears to be perfectly valid; in fact, it is a simplified variant of the DDL used to create the **PLANTING_ACTIVITY_DV** JRDV in the prior task, and it attempts to build a JRDV between the PLANTING_SCHEDULE and TEAMS tables.
 
-- Open the file named **jrdv_failures.sql** by clicking on the File ... Open icon. 
+- Open the file named **jrdv_failures.sql** by clicking on the *File ... Open* icon. 
 - Select the **hol23c_free** database from the drop-down list in the upper-right-hand corner of the window to connect to your PDB. 
 - Execute the statement. You should receive an error message after the statement executes:
 
@@ -97,7 +97,6 @@ This task looks at a few eccentricities you might encounter when creating your o
             using JSON_OBJECT and JSON_ARRAYAGG with JSON_OBJECT input.
             Joins must be expressed on key columns with referential integrity.
     ```
-
 
 3. The final line in the explanation hints at what went wrong: The "leading" table in the **CREATE OR REPLACE ... VIEW** statement - **TEAMS** - is not a table that associates data between the other tables in the DDL statement. This is one of several basic requirements of constructing JRDVs when linking them together:
 
