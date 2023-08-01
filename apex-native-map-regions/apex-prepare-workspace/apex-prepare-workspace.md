@@ -98,7 +98,18 @@ This lab assumes:
 
     ![sign out from admin](images/apex-dev-logout.png)
 
-9. You have now completed this lab.
+9. Just one final thing must be configured for APEX Native Map Regions to work properly: We need to inform APEX where to retrieve the standard Oracle base map images. To do that, we need to add the IP address and host name to our configuration's **/etc/hosts** file. Copy this command to a terminal window prompt and then execute it:
+    ```
+    <copy>sudo sh -c 'echo "173.223.146.112 elocation.oracle.com" >> /etc/hosts'</copy>
+    ```
+    You can validate the proper line has been added to /etc/hosts by issuing this command from a terminal window:
+
+    ```
+    <copy>cat /etc/hosts</copy>
+    ```
+    ![Check /etc/hosts configuration](images/post-cat-etc-hosts.png)
+
+10. You have now completed this lab.
 
 ## Learn More
 * [Oracle APEX 23.1: Workspace and Application Administration](https://docs.oracle.com/en/database/oracle/apex/23.1/aeadm/workspace-and-application-administration.html#GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14)
