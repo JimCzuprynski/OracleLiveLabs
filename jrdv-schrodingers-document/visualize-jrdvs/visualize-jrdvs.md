@@ -127,7 +127,7 @@ Now that our APEX environment is fully configured, we'll use the installed APEX 
 ![exitapplication](images/apex-dev-logout.png)
 
 
-. You have now completed this lab.
+4. You have now completed this lab.
 
 ## Learn More
 * [Oracle Database 23c: Spatial Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/spatial-concepts.html#GUID-67E4037F-C40F-442A-8662-837DD5539784)
