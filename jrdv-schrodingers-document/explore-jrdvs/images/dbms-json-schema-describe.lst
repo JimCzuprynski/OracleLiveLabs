@@ -1,0 +1,189 @@
+SET LINESIZE 132
+SET PAGESIZE 5000
+SELECT 
+  JSON_SERIALIZE(DBMS_JSON_SCHEMA.DESCRIBE('TEAM_ASSIGNMENTS_DV') PRETTY)
+  AS team_assignments_dv_json_schema;SQL> SQL>   2    3  
+
+TEAM_ASSIGNMENTS_DV_JSON_SCHEMA
+----------------------------------------------------------
+{
+  "title" : "TEAM_ASSIGNMENTS_DV",
+  "dbObject" : "HOL23C.TEAM_ASSIGNMENTS_DV",
+  "dbObjectType" : "dualityView",
+  "dbObjectProperties" :
+  [
+    "insertable",
+    "updatable",
+    "deletable",
+    "check"
+  ],
+  "type" : "object",
+  "properties" :
+  {
+    "_metadata" :
+    {
+      "etag" :
+      {
+	"extendedType" : "string",
+	"maxLength" : 200
+      },
+      "asof" :
+      {
+	"extendedType" : "string",
+	"maxLength" : 20
+      }
+    },
+    "teamid" :
+    {
+      "extendedType" : "number",
+      "sqlPrecision" : 8,
+      "sqlScale" : 0,
+      "dbAnnotations" :
+      [
+	"check"
+      ]
+    },
+    "teamname" :
+    {
+      "extendedType" : "string",
+      "maxLength" : 60,
+      "dbAnnotations" :
+      [
+	"update",
+	"check"
+      ]
+    },
+    "teamleadcontact" :
+    {
+      "extendedType" : "number",
+      "sqlPrecision" : 8,
+      "sqlScale" : 0,
+      "dbAnnotations" :
+      [
+	"update",
+	"check"
+      ]
+    },
+    "member" :
+    {
+      "type" : "array",
+      "items" :
+      {
+	"type" : "object",
+	"properties" :
+	{
+	  "memberid" :
+	  {
+	    "extendedType" : "number",
+	    "sqlPrecision" : 8,
+	    "sqlScale" : 0,
+	    "dbAnnotations" :
+	    [
+	      "check"
+	    ]
+	  },
+	  "mbr_lat" :
+	  {
+	    "extendedType" : "number",
+	    "sqlPrecision" : 8,
+	    "sqlScale" : 6,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_lng" :
+	  {
+	    "extendedType" : "number",
+	    "sqlPrecision" : 8,
+	    "sqlScale" : 6,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_city" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 40,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_addr" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 40,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_zipcode" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 5,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_lname" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 40,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_fname" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 40,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  },
+	  "mbr_state" :
+	  {
+	    "extendedType" : "string",
+	    "maxLength" : 2,
+	    "dbAnnotations" :
+	    [
+	      "update",
+	      "check"
+	    ]
+	  }
+	},
+	"required" :
+	[
+	  "memberid",
+	  "mbr_lat",
+	  "mbr_lng",
+	  "mbr_city",
+	  "mbr_addr",
+	  "mbr_zipcode",
+	  "mbr_lname",
+	  "mbr_fname",
+	  "mbr_state"
+	]
+      }
+    }
+  },
+  "required" :
+  [
+    "teamid",
+    "teamname",
+    "teamleadcontact"
+  ]
+}
