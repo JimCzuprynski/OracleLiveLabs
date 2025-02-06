@@ -84,7 +84,6 @@ This lab assumes you have completed all previous labs successfully.
 
 ## Learn More
 - [Operational Property Graph Fundamentals](https://docs.oracle.com/en/database/oracle/property-graph/24.3/spgdg/introduction-property-graphs.html)
-- [DBMS_CLOUD Package](https://docs.oracle.com/en/database/oracle/[FINISH-THIS-LINK])
 - [Oracle SQL Web Developer Concepts and Usage](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/connect-database-actions.html#GUID-102845D9-6855-4944-8937-5C688939610F)
 
 ## Acknowledgements
