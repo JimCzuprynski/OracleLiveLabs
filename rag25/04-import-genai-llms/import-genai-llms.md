@@ -32,9 +32,9 @@ Our next step is to import the ONNX LLMs directly into our 23ai database.
 
 2. Since The ONNX LLMS just loaded conform to the same standards that Oracle data mining and machine learning algorithms use, let's review their metadata and features.
 
-  In your SQL Web Developer session, open a new SQL worksheet: 
+    In your SQL Web Developer session, open a new SQL worksheet:
 
-    ![Open SQL Worksheet](./images/sdw-open-new-worksheet.png)
+    ![Open SQL Worksheet](./images/swd-open-new-worksheet.png)
 
  
 3. Copy this SQL query into the SQL worksheet and then execute it by clicking on the *Run Statement* button:
