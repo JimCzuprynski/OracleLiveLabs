@@ -4,16 +4,32 @@
 || Author:  Jim Czuprynski (Zero Defect Computing, Inc.)
 */
 
------
--- Set session environment:
------
-ALTER SESSION SET CONTAINER = freepdb1;
-ALTER SESSION SET CURRENT_SCHEMA = APEX_240100;
-
 SET SERVEROUTPUT ON
 DECLARE
-    workspace_exists PLS_INTEGER := 0;
+    workspace_exists  PLS_INTEGER := 0;
+    apex_schema_owner VARCHAR2(24);
+    sql_statement     VARCHAR2(128);
+
 BEGIN
+
+    -----
+    -- Obtain current APEX schema owner name and set CURRENT_SCHEMA accordingly
+    -----
+    BEGIN
+        SELECT schema 
+          INTO apex_schema_owner 
+          FROM dba_registry 
+         WHERE comp_id = 'APEX';
+         
+        sql_statement := 'ALTER SESSION SET CURRENT_SCHEMA = ' || apex_schema_owner;
+        
+        EXECUTE IMMEDIATE sql_statement;
+        
+    EXCEPTION
+        WHEN OTHERS THEN   
+            DBMS_OUTPUT.PUT_LINE('Error setting current schema to APEX owner - investigate immediately: ' || SQLCODE || ' - ' || SQLERRM);
+
+    END;
 
     -----
     -- Remove workspace, if it exists:
@@ -24,7 +40,7 @@ BEGIN
          WHERE workspace = 'RAG';
     
        IF workspace_exists > 0 THEN
-            DBMS_OUTPUT.PUT_LINE('RAG workspace exists! It will be removed and replaced.');
+            DBMS_OUTPUT.PUT_LINE('>>> RAG APEX workspace exists! It will be removed and replaced.');
             APEX_INSTANCE_ADMIN.REMOVE_WORKSPACE(
                 p_workspace => 'RAG'
                ,p_drop_users => 'N'
@@ -73,6 +89,8 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('Error while creating ADMIN user for RAG workspace - investigate immediately: ' || SQLCODE || ' - ' || SQLERRM);
 
     END;
+
+    DBMS_OUTPUT.PUT_LINE('>>> RAG APEX Workspace successfully completed!');
 
 EXCEPTION
   WHEN OTHERS THEN
