@@ -4,8 +4,6 @@
 || Author:  Jim Czuprynski, Zero Defect Computing, Inc.
 */
 
-DROP PROPERTY GRAPH smi_network;
-
 CREATE OR REPLACE PROPERTY GRAPH smi_network
   VERTEX TABLES (
     entities AS MESSENGERS
