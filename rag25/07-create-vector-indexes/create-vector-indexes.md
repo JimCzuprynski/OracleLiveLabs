@@ -35,10 +35,10 @@ Let's explore the basics of accessing embeddings within our document corpus befo
 
 2. Next, open and execute the  **approx-match-query.sql** script. It will issue a query against the **cdc_embeddings** column in the **CORPUS_CHUNKS** table to locate the top 10 responses that best answer the query string *"Are EV batteries safe?"* but with an *approximate match* using the **VECTOR_EMBEDDING** function using *cosine distance*. 
 
-
    ![Run approximate match search query](./images/approx-match-query-no-index.png)
 
    However, note that the results are essentially *identical* even though  we asked for an *approximate* search instead of an exact search.
+   
    ![Query EXPLAIN PLAN results](./images/approx-match-query-no-index-explained.png)
 
    In both cases, the entire table needed to be searched. For a small number of document chunks in a corpus like the one we've created, this may not cause significant execution delays, but obviously in a much larger corpus, a full table scan operation could take *much* longer.
@@ -50,13 +50,13 @@ Now let's see how adding a vector index may improve query performance significan
 
    ![Create HNSW vector index](./images/create-hnsw-vector-index.png)
 
-2. To observe the impact of the HNSW index on query performance, re-open and execute the **exact-match-query.sql** script. 
+2. To observe the impact of the HNSW index on query performance, re-open and execute the **exact-match-query.sql** script.
 
    ![Run exact match search query](./images/exact-match-query-hnsw-index.png)
 
    You'll notice the results are identical to the query's execution before the HNSW index was added; also, the corresponding EXPLAIN PLAN shows no difference. 
 
-      ![Query EXPLAIN PLAN results](./images/exact-match-query-hnsw-index-explained.png)
+   ![Query EXPLAIN PLAN results](./images/exact-match-query-hnsw-index-explained.png)
 
    The reason is that an exact search operation *cannot use a vector index*. However, as we'll see in a moment, an approximate search definitely can use a vector index for better performance.
 

@@ -58,51 +58,75 @@ This lab assumes you have completed all previous labs successfully.
 
     ![Select Import](images/edit-app-home-page.png)
 
-## Task 2: Set Up OpenAI Credentials
-To illustrate how we can use other generative AI and RAG tools from external providers, we will deploy OpenAI within one of our chatbot application pages. This requires us to sign up for an OpenAI API key and purchase a small amount of credits for demonstration purposes. (OpenAI offered extremely limited access to its lowest-powered AI tools for free until September 2024; they now charge a $5 minimum fee to access those tools.)
+## Task 2: Set Up OCI Generative AI Web Service Credentials
+To illustrate how we can use other generative AI and RAG tools from external providers, we will deploy *Oracle Cloud Infrastructure Generative AI* (OCI GenAI) Services within one of our chatbot application pages using an appropriate and supported LLM. 
 
-1. Open a browser window and navigate to https://auth.openai.com/authorize. The sign-up screen appears. Supply your preferred email address.
+To accomplish this, we'll first need to *gather pertinent information* about our current OCI configuration. We'll then *generate an API key* within OCI and retain it so we can supply it within APEX in a following step.
 
-    ![OpenAI Signup Step 1](images/openai-signup-01.png)
+1. In a separate window, open your editor of choice (e.g. *Microsoft Notepad*) so you can easily capture all needed OCI IDs (aka *OCIDs*) and other security credentials to retain them in a safe place.
 
-2. Supply a significantly robust password of at least 12 characters and *be sure to retain it safely* as you will likely need it again later. Click the *Continue* button to proceed.
+    ![Open MS Notepad](images/open-notepad.png)
 
-    ![OpenAI Signup Step 2](images/openai-signup-02.png)
+2. Return to your original OCI sign-in page, sign in, and navigate to your 23ai database's *Autonomous Database* page. Be sure to note the *Compartment* - you'll need to confirm that in a moment.
 
-3. OpenAI will then send you a confirmation link to the email account you supplied. Upon receipt, verify your email with the six-digit code they provided and continue the signup process.
+    ![Return to ADB Console](images/return-to-adb-console.png)
 
-    ![OpenAI Signup Step 3](images/openai-signup-03.png)
+3. Open the profile for the user you've connected as by clicking on the User button near the top right-hand corner.
 
-4. Supply the requested personal information and click the *Agree* button to continue the signup process.
+    ![Open User Profile](images/open-user-profile.png)
 
-    ![OpenAI Signup Step 4](images/openai-signup-04.png)
+4. Select the URI for the user account.
 
-5. Supply the remaining requested information and click the *Create Organization* button to continue the signup process.
+    ![Select User Account](images/select-user.png)
 
-    ![OpenAI Signup Step 5](images/openai-signup-05.png)
+5. Information about the selected OCI User Account is shown. Click on the *Show* link to view the OCID for the user account, and then click the *Copy* link to copy that value to the clipboard. Copy that OCID to the file you've opened in your chosen editor.
 
-6. At last it's time to create an API key. Supply the requested information and click the *Generatee API Key* button.
+    ![View OCI User Information](images/show-copy-ocid-user.png)
 
-    ![OpenAI Signup Step 6](images/openai-signup-06.png)
+6. Scroll down a bit farther on the OCI User Account page until you see the *Resources* left-hand menu, then select the *API Keys* link.
 
-7. OpenAI will return the requested API key. Copy this key and **be sure to retain it safely** as you will need it in the next lab. **Do not click the *Done* button until you have saved this key!** 
+    ![Select API Keys option](images/select-api-keys.png)
 
-    ![OpenAI Signup Step 7](images/openai-signup-07.png)
+7. A list of all currently-configured API Keys for your user account are shown. Click the *Add API Key* button to start the process of adding a new API key.
 
-8. Select the recommended *$5 credits* option to purchase the  minimum amount of OpenAI credits. Click *Purchase credits* to complete the signup process. 
+    ![Start API Key Generation](images/view-existing-api-keys.png)
 
-    ![OpenAI Signup Step 8](images/openai-signup-08.png)
+8. Leave the default setting of *Generate API key pair* to create the key by clicking on the *Download private key* button. 
 
-9. Supply your credit card details and then click *Continue* to complete the signup process. Note that these credits are usable for any other OpenAI experiments you may wish to pursue beyond this Live Lab.
+    ![Generate API Key Pair](images/create-new-api-key.png)
 
-    ![OpenAI Signup Step 9](images/openai-signup-09.png)
+9. When prompted, supply a *filename* and *save the new private API key in your local directory*. You will copy the private key value retained in that file in a future step into your APEX GenAI Service definition. **Do not lose this file, or you will have to regenerate a whole new key pair.**
 
-10. **You've successfully completed all tasks to prepare your APEX application infrastructure.** You may proceed to the next lab.
+    ![Save New API Key FIle](images/download-new-api-key.png)
 
+10. Next, click the *Add* button to save the API private key and its corresponding fingerprint within your OCI user's API key repository.
+
+    ![Add API Key to Repository](images/save-new-api-key.png)
+
+11. From what's displayed next, copy the newly-generated API key's **fingerprint,** the **user OCID,** and the **tenancy OCID** into the file you still have open in your editor of choice, and then click the *Close* button to proceed.
+
+    ![Capture API Key Details](images/capture-api-key-details.png)
+
+12. Control returns to the *API keys* window. Review what's shown there to confirm the successful creation of the new API key.
+
+    ![View Latest APIKeys](images/view-latest-api-keys.png)
+
+13. Almost done! Now click on the *hamburger* menu at the top left hand corner.
+
+    ![Click Hamburger](images/click-on-hamburger.png)
+
+14. From the left hand side menu that's displayed, select the *Identity & Security* option, then select the *Compartments* link to see the list of all compartments for this user account.
+
+    ![Select Identity & Security - Compartments Option](images/select-identity-and-security.png)
+
+15. Select the compartment ID in which your ADB instance was created, then mouse over the *shortened OCID link* to obtain the option to copy the compartment's OCID. Click the *Copy* link to copy it to the clipboard, and then be sure to paste that into the file you still have open in your editor of choice.
+
+    ![Copy and Retain Compartment OCID](images/copy-compartment-ocid.png)
+
+16. **You've successfully captured all pertinent information for configuring OCI Generative AI Services within APEX.** You can proceed to the next task. 
 ## Learn More
 * [APEX Application Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/application-builder-concepts.html)
-* [OpenAI API Reference](https://platform.openai.com/docs/api-reference/introduction)
-
+* [How To Generate An API Signing Key](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm)
 
 ## Acknowledgements
 - **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc. 

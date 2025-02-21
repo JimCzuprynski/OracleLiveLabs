@@ -57,8 +57,8 @@ Let's take a quick look at some of the messages that were exchanged within our s
 
     Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled [finish]. It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
 
-## Task 2: Configure External Generative AI Services
-To enable our APEX application to use external generative AI services, we'll next configure OpenAI as our service provider.
+## Task 2: Configure OCI Generative AI Services
+Now we'll configure our APEX application to use *OCI Generative AI* as its Generative AI Service provider.
 
 1. Return to the *Home Edit* page for your APEX application and then click on the *Up arrow* in the top-left-hand corner. 
 
@@ -72,27 +72,35 @@ To enable our APEX application to use external generative AI services, we'll nex
 
     ![Select Generative AI Services](images/select-generative-ai-services.png)
 
-2. A list of all configured Generative AI Services is displayed. Click the link for the one named *OpenAIChat* to view its attributes.
+2. A list of all configured Generative AI Services is displayed. Click the link for the one named *OCI Gen AI* to view its attributes.
 
     ![List Available Generative AI Services](images/list-generative-ai-services.png)
 
-3. Review the attributes for the *OpenAIChat* service that's already been configured for your application. 
+3. Adjust the attributes for the *OCI Gen AI* service that's already been configured for your application. 
 
-    ![View External Generative AI Service Details](images/view-openaichat-service-configuration.png)
+    ![View OCI Generative AI Service Details](images/view-ocigenai-service-configuration.png)
 
-    Note that the *AI Provider* is **Open AI** and the OpenAI AI model it's configured to use is **gpt-4o**. Be sure to click the *Cancel* button when you're done, as no changes are needed.
+    - Copy the value for *Compartment ID* that you saved in the previous lab into the *Compartment ID* field. 
 
-4. Next, we'll reconfigure web credentials for the OpenAIChat Generative AI Service. Select the *Web Credentials* option.
+    - Note that the *Region* is **us-chicago-1** and the AI model it's configured to use is **meta-llama-3.3-70binstruct**. 
+    
+    - *No other changes are needed,* so now click the *Apply Changes* button.
+
+4. Next, we'll reconfigure web credentials for the *OCI Gen AI* Service. Select the *Web Credentials* option.
 
     ![Select Web Credentials](images/select-web-credentials.png)
 
-    The *OpenAIChat* Generative AI Service uses the *RebuiltAICred* web credential, so select that one.
+    The *OCI Gen AI* Generative AI Service uses the *credentials_for_ocigenai* web credential, so select that one.
 
     ![Select Credentials to Edit](images/select-web-credentials-to-edit.png)
 
-    Now, copy the OpenAI API Key you generated in the prior lab into the *Credential Secret* field and then click *Apply Changes* to save the credential.
+    Modify the following values using the files you saved in the prior lab:
 
-![Add OpenAI API Key Credential](images/specify-openai-service-web-credentials.png)
+    - From the file you saved *in your editor of choice*, copy the values for *OCI User ID*, *OCI Tenancy ID*, and *OCI Public Key Footprint* into their corresponding fields.
+    - From the file you saved *with a file extension of **PEM***, copy the entire private key string into the *OCI Private Key* field.
+    - Click the *Apply Changes* button to save your modifications.
+
+    ![Add OCI Gen AI Credentials](images/specify-ocigenai-service-web-credentials.png)
 
 4. Return to the *Home Edit* page. Select the *Shared Components* option, then choose *Security Attributes* from the returned menu.
 
@@ -100,13 +108,11 @@ To enable our APEX application to use external generative AI services, we'll nex
 
     ![Select AI Attributes](images/select-security-attributes.png)
 
-    Choose the *AI* option from the right-hand side of the top menu.
+    Choose the *AI* option from the right-hand side of the top menu, and then choose *OCI Gen AI* as our AI Service provider. 
 
-    ![Select AI Attributes](images/select-ai-attributes.png)
+    ![Select OCI Gen AI Service Provider](images/select-desired-ai-provider.png)
 
-    Finally, we'll choose *OpenAIChat* as our AI Service provider. Note that while multiple external AI service providers can be configured for APEX, only **one** can be utilized for the entire application. Click on Apply Changes to finish the dialog and return to the *Home Edit* page.
-
-    ![Pick External AI Service Provider](images/select-desired-external-ai-provider.png)
+    Note that while multiple external AI service providers can be configured for APEX, only **one** can be utilized for the entire application. Click on *Apply Changes* to finish the dialog and return to the *Home Edit* page.
 
 ## Task 3: Exploring the Social Media Responder Generative AI Implementation
 

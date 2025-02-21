@@ -29,7 +29,7 @@ This lab assumes you have completed all previous labs successfully.
     - If your operating system is *Microsoft Windows*, copy the URL below into your preferred browser's search bar:
 
     ```
-    $ <copy>
+    <copy>
     https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/partner-solutions%2Fgimme-a-vector%2Fgimme-a-vector.zip
     </copy>
     ```
@@ -43,7 +43,7 @@ This lab assumes you have completed all previous labs successfully.
     - If your operating system is Linux, open a command window and then copy and execute the **wget** command below:
 
     ```
-    $ <copy>
+    <copy>
     wget --no-check-certificate https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/partner-solutions%2Fgimme-a-vector%2Fgimme-a-vector.zip
     </copy>
    ```
@@ -59,7 +59,7 @@ This lab assumes you have completed all previous labs successfully.
     - If your operating system is *Linux*, open a command window and then use the **unzip** command below to extract the files to your chosen local directory: 
 
     ```
-    $ <copy>unzip -o partner-solutions_gimme-a-vector-gimme-a-vector.zip</copy>
+    <copy>unzip -o partner-solutions_gimme-a-vector-gimme-a-vector.zip</copy>
     ```
 
 4. If it's desirable to save disk space, remove the remaining ZIP file after it's been uncompressed.
@@ -90,7 +90,7 @@ This lab assumes you have completed all previous labs successfully.
 
 We will be using *Oracle Application Express* (APEX) to construct and execute our chatbot application, but before we can do that, we'll need to initialize an APEX workspace for our development efforts.
 
-1. Still connected as the **admin** user, open and execute the script named **create-apex-workspace.sql** to create a new APEX workspace within your ADB environment.
+1. Still connected as the **admin** user, open and execute the script named **create-apex-environment.sql** to create a new APEX workspace within your ADB environment.
 
    ![Create APEX workspace](./images/create-apex-workspace.png)
 

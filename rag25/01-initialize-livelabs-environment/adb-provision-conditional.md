@@ -104,12 +104,7 @@ In this lab, you will:
 
     ![Choose the remaining parameters.](./images/choose-alwaysfree-23ai.png " ")
 
-7. Backup retention:
-    - __Backup retention__ - For this lab, accept the default 60 days.
-
-    ![Choose the backup retention period.](./images/choose-backup-retention-period.png " ")
-
-8. Create administrator credentials:
+7. Create administrator credentials:
 
     - __Password and Confirm Password__ - Specify the password for ADMIN user of the service instance. The password must meet the following requirements:
     - The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
@@ -121,7 +116,7 @@ In this lab, you will:
 
     ![Enter password and confirm password.](./images/task2-7.png " ")
 
-9. Choose network access:
+8. Choose network access:
     - For this lab, accept the default, **Secure access from everywhere**.
     - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select **Secure access from allowed IPs and VCNs only** in the Choose network access area.
     - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
@@ -130,10 +125,10 @@ In this lab, you will:
     ![Choose the network access.](./images/task2-8.png " ")
 
 <if type="livelabs">
-10. Choose a license type. For this lab, choose __Bring your own license (BYOL)__. The two license types are:
+9. Choose a license type. For this lab, choose __Bring your own license (BYOL)__. The two license types are:
 </if>
 <if type="freetier">
-10. Choose a license type. For this lab, accept the default __License included__. The two license types are:
+9. Choose a license type. For this lab, accept the default __License included__. The two license types are:
 </if>
 
     - __Bring your own license (BYOL)__ - Select this type when your organization has existing database licenses.
@@ -146,19 +141,19 @@ In this lab, you will:
     ![Click Create Autonomous Database.](./images/task2-9.png " ")
 </if>
 
-11. For this lab, do not provide a contact email address. The **Contact Email** field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
+10. For this lab, do not provide a contact email address. The **Contact Email** field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
 
     ![Do not provide a contact email address.](images/contact-email-field.png)
 
 
-12. Click __Create Autonomous Database__. If you see an error *Authorization failed or requested resource not found*, it means you are not in the compartment assigned to you. To solve this error, refer to Task 1 -> Step 4 to choose the correct compartment assigned to you, as shown on your *Reservation Information* page.
+11. Click __Create Autonomous Database__. If you see an error *Authorization failed or requested resource not found*, it means you are not in the compartment assigned to you. To solve this error, refer to Task 1 -> Step 4 to choose the correct compartment assigned to you, as shown on your *Reservation Information* page.
 
     ![Click Create Autonomous Database.](./images/task2-10.png " ")
 
-13.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, ECPU count, and storage size.
+12.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, ECPU count, and storage size.
     ![Database instance homepage.](./images/task2-11.png " ")
 
-You may now **proceed to the next lab**.
+13. You may now **proceed to the next lab**.
 
 ## Learn more
 
