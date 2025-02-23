@@ -1,16 +1,15 @@
 # Build Document Corpus
 
 ## Introduction
-
 Before we can construct meaningful responses to prompts to our LLM, we need to build an authoritative set of facts based on a corpus of relevant documents within our 23ai Database.
 
-Estimated Time: 10 minutes
+**Estimated Time: 5 minutes**
 
 ### Objectives
 
 In this lab, you will:
 
-- Load documents into CORPUS_DOCUMENTS table as BLOBs
+- Load documents into **CORPUS\_DOCUMENTS** table as BLOBs
 - Explore statistics and features of newly-loaded corpus documents
 
 ### Prerequisites
@@ -21,13 +20,13 @@ This lab assumes you:
 
 ## Task 1: Load Corpus Documents Into 23ai Database
 
-1. Still logged in as the HOL23 user in your SQL Web Developer session, open and execute the **load-corpus-documents.sql** script. This script loads the PDFs you previously copied into your database's DATA_PUMP_DIR directory and stores them as BLOB datatypes within the **CORPUS_DOCUMENTS** table.
+1. Still logged in as the HOL23 user in your SQL Web Developer session, open and execute the **load-corpus-documents.sql** script. This script loads the PDFs you previously copied into your database's **DATA\_PUMP\_DIR** directory and stores them as BLOB datatypes within the **CORPUS\_DOCUMENTS** table.
 
    ![Load corpus documents as BLOBs](./images/load-corpus-documents.png)
 
    **NOTE:** If any errors occur during this script's execution, be sure you properly completed the prior steps to copy all files from object storage successfully.
 
-3. Let's take a brief look at what's stored within the **CORPUS_DOCUMENTS** table. In your SQL Web Developer session, open a new SQL worksheet: 
+3. Let's take a brief look at what's stored within the **CORPUS\_DOCUMENTS** table. In your SQL Web Developer session, open a new SQL worksheet: 
 
     ![Open SQL Worksheet](./images/swd-open-new-worksheet.png)
 

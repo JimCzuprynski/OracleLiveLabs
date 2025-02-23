@@ -4,7 +4,7 @@
 
 We'll conclude this Live Lab with an exploration of various features within our imported APEX application that use various Oracle 23ai built-in generative AI features as well as explore how to use external AI providers to expand those capabilities.
 
-Estimated Time: 10 minutes.
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
@@ -55,7 +55,7 @@ Let's take a quick look at some of the messages that were exchanged within our s
 
 ![exitapplication](images/app-301-signout.png)
 
-    Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled [finish]. It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
+Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled [finish]. It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
 
 ## Task 2: Configure OCI Generative AI Services
 Now we'll configure our APEX application to use *OCI Generative AI* as its Generative AI Service provider.
@@ -90,7 +90,7 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
     ![Select Web Credentials](images/select-web-credentials.png)
 
-    The *OCI Gen AI* Generative AI Service uses the *credentials_for_ocigenai* web credential, so select that one.
+    The *OCI Gen AI* Generative AI Service uses the *credentials\_for\_ocigenai* web credential, so select that one.
 
     ![Select Credentials to Edit](images/select-web-credentials-to-edit.png)
 
@@ -152,17 +152,17 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
     
     - Next, it captures either the appropriate *email address* or *social media handle* of the sender to which we'd be responding. Then, it constructs the prompt that will be sent to our specified generative AI service.
 
-    - Note the call to the **pkg_rag_processing.summary_document** PL/SQL package procedure. The code for that package is available in the scripts you downloaded (see **pkg_rag_processing.sql**). That procedure invokes logic to retrieve the top four approximate matches to the selected message text and returns those matching document chunks in paragraph format. 
+    - Note the call to the **pkg\_rag\_processing.summary\_document** PL/SQL package procedure. The code for that package is available in the scripts you downloaded (see **pkg-rag-processing.sql**). That procedure invokes logic to retrieve the top four approximate matches to the selected message text and returns those matching document chunks in paragraph format. 
     
     ![Page-500-03](images/SMR-buildprompt-code.png)
 
-    - Finally, the code that the *RenderAnswer* process executes submits the engineered prompt to the OpenAI AI service we've configured using the **APEX_AI.GENERATE** procedure. OpenAI then uses the specified generative AI model - in our case, **gpt-4o** - to perform some additional refinement of the response before it's returned for human review.
+    - Finally, the code that the *RenderAnswer* process executes submits the engineered prompt to the OpenAI AI service we've configured using the **APEX\_AI.GENERATE** procedure. OpenAI then uses the specified generative AI model - in our case, **gpt-4o** - to perform some additional refinement of the response before it's returned for human review.
 
     ![Page-500-04](images/SMR-renderanswer-code.png)
 
-7. Feel free to explore the myriad messages presented here, choose a sentiment and format, and generate a response to the message to see how the generative AI aspects of the application work.
+6. Feel free to explore the myriad messages presented here, choose a sentiment and format, and generate a response to the message to see how the generative AI aspects of the application work.
 
-8. **You have now completed this Live Lab.** You may sign out of your Oracle 23ai ADB Always Free environment.
+**You have now completed this Live Lab.** You may sign out of your Oracle 23ai ADB Always Free environment.
 
 ## Learn More
 * [Property Graph Developer’s Guide](https://docs.oracle.com/en//database/oracle/property-graph/23.3/spgdg/index.htm)
@@ -180,4 +180,4 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
 ## Acknowledgements
 - **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc. 
-* **Last Updated By/Date** - Jim Czuprynski, July 2023
+* **Last Updated By/Date** - Jim Czuprynski, February 2025

@@ -4,7 +4,7 @@
 
 Before we can build our Generative AI solution for reviewing and visualizing our social media campaign's messaging and responding to comments and feedback, we must first initialize our development environment and gather all needed files and document data sources. This lab assumes that you have already created your Oracle Autonomous Database 23*ai* Always Free instance and explored the database tools available for accessing your database environment, especialy SQL Developer Web.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
@@ -92,7 +92,7 @@ We will be using *Oracle Application Express* (APEX) to construct and execute ou
 
 1. Still connected as the **admin** user, open and execute the script named **create-apex-environment.sql** to create a new APEX workspace within your ADB environment.
 
-   ![Create APEX workspace](./images/create-apex-workspace.png)
+   ![Create APEX workspace](./images/create-apex-environment.png)
 
 2. Once the script completes, we'll open the APEX application development environment. Hover your mouse over and then click the *Database Actions* logo.
 

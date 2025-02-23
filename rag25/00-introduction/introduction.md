@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-![Logo](images/ZDCLogo.png)
+![Logo](images/zdclogo.png)
 
 ### Community-Contributed Workshop
 
@@ -19,6 +19,9 @@ In this lab, you will learn how to:
 - Use **VECTOR_DISTANCE** to perform exact and similarity searches against an indexed VECTOR datatype
 - Build a sample APEX application with **APEX_AI** and external LLM APIs to interact with users
 
+
+**Estimated Time:** 80 minutes
+
 ### Labs
 
 | # | Lab | Est. Time |
@@ -32,20 +35,6 @@ In this lab, you will learn how to:
 | 7 | [Create Vector Indexes](?lab=create-vector-indexes) | 10 min |
 | 8 | [Create ChatBot Application](?lab=create-chatbot-application) | 10 min |
 | 9 | [Interact With Chatbot Application](?lab=interact-with-chatbot) | 10 min |
-{: title="Labs with Times"}
-
-Estimated Time: 80 minutes
-
-### **Let's Get Started!**
-
-- [Click here](?lab=initialize-livelabs-environment), select **Lab 1** from the menu on the left, or click the arrow below to start the workshop.
-
-## Learn More
-
-- [Oracle Generative AI Services](https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/)
-- [Oracle Autonomous Database](https://www.oracle.com/autonomous-database/)
-- [Oracle APEX](https://apex.oracle.com/en/)
-- [APEX Community](https://apex.oracle.com/community)
 
 ## Acknowledgements
 

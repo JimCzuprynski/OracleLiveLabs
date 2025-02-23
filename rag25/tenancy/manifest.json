@@ -18,11 +18,6 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Get Started",
-            "description": "This is the prerequisite for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "../../../../labs/cloud-login/cloud-login-direct-signin.md"
-        },
-        {
             "title": "Lab 1: Provision an Oracle Autonomous Database",
             "description": "Provision an Oracle 23ai Autonomous Always Free Database",
             "filename": "../../01-initialize-livelabs-environment/adb-provision-conditional.md"
@@ -57,7 +52,7 @@
         },
         {
             "title": "Lab 9: Interact With ChatBot Application",
-            "filename": "../../09-interact-with-chatbot/09-interact-with-chatbot.md"
+            "filename": "../../09-interact-with-chatbot/interact-with-chatbot.md"
         },
         {
             "title": "Need Help?",

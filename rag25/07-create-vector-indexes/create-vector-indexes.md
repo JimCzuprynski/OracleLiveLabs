@@ -4,7 +4,7 @@
 
 The performance of SQL queries that search for an approximate match against embeddings are often improved by applying a *vector index* against the VECTOR datatype. In this lesson, we'll deploy one of several different vector index types available in 23ai - *Hierarchical Navigable Small-World* (HNSW) indexes - and briefly experiment with improving query performance through those indexing methods.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 

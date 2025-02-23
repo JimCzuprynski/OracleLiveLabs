@@ -2,17 +2,17 @@
 
 ## Introduction
 
-Our corpus documents have been loaded, so now it's now time to split up document content into appropriately-sized *chunks of text* (appropriately called "chunking"), create *embeddings* based on those chunks' content, and capture those embeddings into the Oracle 23ai VECTOR datatype. We'll do that through several procedures that are part of the new 23ai **DBMS_VECTOR** and **DBMS_VECTOR_CHAIN** packages.
+Our corpus documents have been loaded, so now it's now time to split up document content into appropriately-sized *chunks of text* (appropriately called "chunking"), create *embeddings* based on those chunks' content, and capture those embeddings into the Oracle 23ai VECTOR datatype. We'll do that through several procedures that are part of the new 23ai **DBMS\_VECTOR** and **DBMS\_VECTOR\_CHAIN** packages.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
 In this lab, you will:
 
-- Experiment with different sizes and methods of document "chunking" with **DBMS_VECTOR_CHAIN.UTL_TO_CHUNKS**
-- Create embeddings based on a selected chunking method with **DBMS_VECTOR_CHAIN.UTL_TO_EMBEDDINGS** and store them in a column with a VECTOR datatype
-- Verify the results of different chunking methods with **TO_VECTOR** and **DBMS_VECTOR.UTL_TO_SUMMARY**
+- Experiment with different sizes and methods of document "chunking" with **DBMS\_VECTOR\_CHAIN.UTL\_TO\_CHUNKS**
+- Create embeddings based on a selected chunking method with **DBMS\_VECTOR\_CHAIN.UTL\_TO\_EMBEDDINGS** and store them in a column with a VECTOR datatype
+- Verify the results of different chunking methods with **TO\_VECTOR** and **DBMS\_VECTOR.UTL\_TO\_SUMMARY**
 
 ### Prerequisites
 
@@ -24,7 +24,7 @@ This lab assumes you:
 
 1. From your SQL Web Developer session, open the **create-corpus-chunks-and-embeddings.sql** script. 
 
-   This script will use the contents stored within the **CORPUS_DOCUMENTS** table to populate rows in the **CORPUS_CHUNKS** table. Click the *Run Script* button or hit *F5* to execute the script. *NOTE: This step may take as long as two minutes to complete - it is performing extremely intense computations.*
+   This script will use the contents stored within the **CORPUS\_DOCUMENTS** table to populate rows in the **CORPUS\_CHUNKS** table. Click the *Run Script* button or hit *F5* to execute the script. *NOTE: This step may take as long as two minutes to complete - it is performing extremely intense computations.*
 
    ![Create corpus chunks and embeddings](./images/create-corpus-chunks-and-embeddings.png)
 
@@ -34,13 +34,13 @@ This lab assumes you:
    ![Closer look at script](./images/chunking-deeper-look.png)
 
 
-   It uses several procedures and functions from the **DBMS_VECTOR_CHAIN** package that is key to handling chunking data and creating embeddings stored in a column with a VECTOR datatype:
+   It uses several procedures and functions from the **DBMS\_VECTOR\_CHAIN** package that is key to handling chunking data and creating embeddings stored in a column with a VECTOR datatype:
 
-   - The innermost function call to **UTL_TO_TEXT** is perhaps the simplest part: It extracts a plain text version of the corpus document selected and then returns it in CLOB format.
+   - The innermost function call to **UTL\_TO\_TEXT** is perhaps the simplest part: It extracts a plain text version of the corpus document selected and then returns it in CLOB format.
 
-   - The results of that call are fed to the **UTL_TO_CHUNKS** function, along with parameter settings specifying how the long strings of text should be chunked into smaller yet still meaningful "chunks" of text.
+   - The results of that call are fed to the **UTL\_TO\_CHUNKS** function, along with parameter settings specifying how the long strings of text should be chunked into smaller yet still meaningful "chunks" of text.
       
-      - The *first* set of parameters tells **UTL_TO_CHUNKS** to break the incoming text into chunks.
+      - The *first* set of parameters tells **UTL\_TO\_CHUNKS** to break the incoming text into chunks.
          - Each chunk will be based on word boundaries.
          - Chunks are to be split up based on sentence-ending marks - for example, a period (.) or other comparable punctuation.
          - Chunks will be created without any overlap - in other words, no trailing data from a prior chunk or leading data from the next chunk will be included.
@@ -48,12 +48,12 @@ This lab assumes you:
          - Finally, the LLM is directed to normalize the results.
       
 
-   - The outermost function call to **UTL_TO_EMBEDDINGS** actually creates the vectorized embeddings based on the selected pre-trained Large Language Model (LLM) - in this case, the *Mini LLM L6 V2* model that we deployed within our 23ai database in the prior lesson.
+   - The outermost function call to **UTL\_TO\_EMBEDDINGS** actually creates the vectorized embeddings based on the selected pre-trained Large Language Model (LLM) - in this case, the *Mini LLM L6 V2* model that we deployed within our 23ai database in the prior lesson.
    
-   - The vectorized embeddings will be stored in the **cdc_embedded** column, but to format them as expected for its **VECTOR** datatype, the call to the **TO_VECTOR** function needs to know precisely how incoming data will be formatted ... and that's what output of the call to the **JSON_TABLE** function defines.
+   - The vectorized embeddings will be stored in the **cdc\_embedded** column, but to format them as expected for its **VECTOR** datatype, the call to the **TO\_VECTOR** function needs to know precisely how incoming data will be formatted ... and that's what output of the call to the **JSON\_TABLE** function defines.
 
 
-3. What was actually populated into the **cdc_embedded** column? Open a new SQL worksheet, then copy the code below and execute it.
+3. What was actually populated into the **cdc\_embedded** column? Open a new SQL worksheet, then copy the code below and execute it.
 
    ```
     <copy>

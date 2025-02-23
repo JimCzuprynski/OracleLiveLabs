@@ -1,10 +1,9 @@
 # Populate Database Schema
 
 ## Introduction
-
 Our next step is to create and populate all needed tables and other database objects. This lab assumes that you have already created your Oracle Autonomous Database 23*ai* Always Free instance and explored the database tools available for accessing your database environment, especialy SQL Developer Web.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
@@ -76,7 +75,7 @@ This lab assumes you have completed all previous labs successfully.
    ![Create constraints](./images/create-constraints.png)
 
 
-9. Open and execute the script named **create-opgs.sql** to create a new *Operational Property Graph* (OPG) named **SMI_PAYLOADS.** Our APEX application and PL/SQL packages will use this view in future steps to navigate the contents of and relationships between social media posters and postings.
+9. Open and execute the script named **create-opgs.sql** to create a new *Operational Property Graph* (OPG) named **SMI\_PAYLOADS.** Our APEX application and PL/SQL packages will use this view in future steps to navigate the contents of and relationships between social media posters and postings.
 
    ![Create OPGs](./images/create-opgs.png)
 

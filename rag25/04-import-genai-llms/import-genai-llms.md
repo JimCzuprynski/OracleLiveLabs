@@ -4,7 +4,7 @@
 
 Oracle 23ai allows LLMs based on the Open Neural Network Exchange (ONNX) model to be stored directly within the database itself. In this lab, you'll load three different ONNX LLMs into your Oracle 23ai database and probe the models' attributes.
 
-Estimated Time: 5 minutes
+**Estimated Time: 5 minutes**
 
 ### Objectives
 
@@ -82,7 +82,7 @@ Our next step is to import the ONNX LLMs directly into our 23ai database.
 
 One last step releated to the ONNX LLMs: adding a new PL/SQL package that our APEX application uses for some advanced generative AI processing.
 
-1. Open and execute the script named **pkg-rag-processing.sql** to create a new PL/SQL package (OPG) named **PKG_RAG_PROCESSING.** Our APEX application will use this package's procedures and functions to interface with various database-resident 23ai generative AI features via PL/SQL.
+1. Open and execute the script named **pkg-rag-processing.sql** to create a new PL/SQL package (OPG) named **PKG\_RAG\_PROCESSING**. Our APEX application will use this package's procedures and functions to interface with various database-resident 23ai generative AI features via PL/SQL.
 
    ![Create PL/SQL package](./images/compile-pkg-rag-processing.png)
 

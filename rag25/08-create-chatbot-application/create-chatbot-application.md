@@ -11,7 +11,7 @@ In this lab, you will:
 - Import the sample **RAG** application into your ADB's **RAG** APEX workspace
 - Configure APEX Generative AI Services and corresponding web credentials to access generative AI chatbot models
 
-Estimated Time: 10 minutes.
+**Estimated Time: 10 minutes**
 
 ### Prerequisites
 
@@ -29,32 +29,34 @@ This lab assumes you have completed all previous labs successfully.
 
     ![Sign into APEX as ADMIN](images/apex-login.png)
 
-2. The APEX development environment opens. Select the *App Builder* option.
+3. The APEX development environment opens. Select the *App Builder* option.
 
     ![Select App Builder](images/apex-app-builder.png)
 
 
-3. We'll now import our existing APEX application from a file. Click on the *Import* icon to start the process.
+4. We'll now import our existing APEX application from a file. Click on the *Import* icon to start the process.
 
     ![Select Import](images/start-import.png)
 
-4. Next, click on the *Drag and Drop* icon to select a file. When the *Open file* dialog appears, select the *f301.sql* file from the local directory where you downloaded all scripts for this Live Lab.
+5. Next, click on the *Drag and Drop* icon to select a file. When the *Open file* dialog appears, select the *f100.sql* file from the local directory where you downloaded all scripts for this Live Lab.
 
     ![Select Import](images/pick-import-file.png)
 
-5. APEX confirms the *f301.sql* file is selected, so click the *Next* button.
+6. APEX confirms the *f100.sql* file is selected, so click the *Next* button.
 
     ![Select Import](images/import-file-selected.png)
 
-6. Change the *Install As Application* option as desired. Here, we specify re-use of the original APEX application ID, but you could choose either option.
+7. Change the *Install As Application* option as desired. Here, we specify re-use of the original APEX application ID, but you could choose either option.
 
     ![Select Import](images/complete-file-import.png)
 
-7. After a few moments, APEX will confirm the app has been successfully installed. Click the *Edit Application* button to continue.
+8. Should any additional warnings appear, ignore them and just click the *Next* button to continue. 
+
+    After a few moments, APEX will confirm the app has been successfully installed. Click the *Edit Application* button to continue.
 
     ![Select Import](images/app-install-done.png)
 
-8. The *Edit Application* home page opens. We'll be reviewing application attributes and code as well as running our imported application from this panel.
+9. The *Edit Application* home page opens. We'll be reviewing application attributes and code as well as running our imported application from this panel.
 
     ![Select Import](images/edit-app-home-page.png)
 

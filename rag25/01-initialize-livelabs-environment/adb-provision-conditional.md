@@ -6,7 +6,7 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 
 >**Note:** While this lab uses ADW, the steps are the same for creating an ATP database.
 
-Estimated Time: 5 minutes
+**Estimated Time: 10 minutes**
 
 Watch the video below for a quick walk-through of the lab.
 [Provision an ADB Instance](videohub:1_qgav6sr7)
