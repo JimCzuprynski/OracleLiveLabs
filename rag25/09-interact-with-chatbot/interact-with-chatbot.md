@@ -90,7 +90,7 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
     ![Select Web Credentials](images/select-web-credentials.png)
 
-    The *OCI Gen AI* Generative AI Service uses the *credentials\_for\_ocigenai* web credential, so select that one.
+    The *OCI Gen AI* Generative AI Service uses the *OCI GenAI Credentials* web credential, so select that one.
 
     ![Select Credentials to Edit](images/select-web-credentials-to-edit.png)
 

@@ -50,15 +50,17 @@ This lab assumes you have completed all previous labs successfully.
 
     ![Select Import](images/complete-file-import.png)
 
-8. Should any additional warnings appear, ignore them and just click the *Next* button to continue. 
+8. It's likely you will see an additional warning about *Credentials* and *Remote Servers* that have already been configured. These can be safely ignored for now, as we'll edit them in the next Lab, so just click the *Next* button to continue. 
 
-    After a few moments, APEX will confirm the app has been successfully installed. Click the *Edit Application* button to continue.
+    ![GenAI Services Configuration Warning](images/ocigenai-reminders.png)
 
-    ![Select Import](images/app-install-done.png)
+9. After a few moments, APEX will confirm the app has been successfully installed. Click the *Edit Application* button to continue.
 
-9. The *Edit Application* home page opens. We'll be reviewing application attributes and code as well as running our imported application from this panel.
+    ![Import Done](images/app-install-done.png)
 
-    ![Select Import](images/edit-app-home-page.png)
+10. The *Edit Application* home page opens. We'll be reviewing application attributes and code as well as running our imported application from this panel.
+
+    ![Edit Application Page](images/edit-app-home-page.png)
 
 ## Task 2: Set Up OCI Generative AI Web Service Credentials
 To illustrate how we can use other generative AI and RAG tools from external providers, we will deploy *Oracle Cloud Infrastructure Generative AI* (OCI GenAI) Services within one of our chatbot application pages using an appropriate and supported LLM. 
