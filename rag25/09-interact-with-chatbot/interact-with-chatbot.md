@@ -55,7 +55,7 @@ Let's take a quick look at some of the messages that were exchanged within our s
 
 ![exitapplication](images/app-signout.png)
 
-Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled *You Down With OPG? Leveraging Operational Property Graphs in Oracle 23ai.* It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
+Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in. You can read more about it [here](https://docs.oracle.com/en//database/oracle/property-graph/23.3/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html).
 
 ## Task 2: Configure OCI Generative AI Services
 Now we'll configure our APEX application to use *OCI Generative AI* as its Generative AI Service provider.
@@ -82,7 +82,7 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
     - Copy the value for *Compartment ID* that you saved in the previous lab into the *Compartment ID* field. 
 
-    - Note that the *Region* is **us-chicago-1** and the AI model it's configured to use is **meta-llama-3.3-70binstruct**. 
+    - Note that the *Region* is **us-chicago-1** and the AI model it's configured to use is **meta-llama-3.3-70b-instruct**. 
     
     - *No other changes are needed,* so now click the *Apply Changes* button.
 
@@ -165,8 +165,8 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 **You have now completed this Live Lab.** You may sign out of your Oracle 23ai ADB Always Free environment.
 
 ## Learn More
-* [Property Graph Developer’s Guide](https://docs.oracle.com/en//database/oracle/property-graph/23.3/spgdg/index.htm)
-* [Using the APEX Graph Visualization Plug-In](https://docs.oracle.com/en//database/oracle/property-graph/23.3/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html)
+* [Property Graph Developer’s Guide](https://docs.oracle.com/en/database/oracle/property-graph/)
+* [Using the APEX Graph Visualization Plug-In](https://docs.oracle.com/en/database/oracle/property-graph/23.3/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html)
 * [Oracle Graph JavaScript API Reference for Property Graph Visualization](https://docs.oracle.com/en/database/oracle/property-graph/23.4/pgjsd/index.html)
 * [APEX and Property Graphs in Oracle Database 23c (video)](https://www.youtube.com/watch?v=DODoJI3sR14)
 * [Oracle Graph Learning Path](https://blogs.oracle.com/database/post/oracle-graph-learning-path)
