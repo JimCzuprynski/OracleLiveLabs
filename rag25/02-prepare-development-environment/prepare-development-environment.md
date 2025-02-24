@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Before we can build our Generative AI solution for reviewing and visualizing our social media campaign's messaging and responding to comments and feedback, we must first initialize our development environment and gather all needed files and document data sources. This lab assumes that you have already created your Oracle Autonomous Database 23*ai* Always Free instance and explored the database tools available for accessing your database environment, especialy SQL Developer Web.
+Before we can build our Generative AI solution for reviewing and visualizing our social media campaign's messaging and responding to comments and feedback, we must first initialize our development environment and gather all needed files and document data sources. This lab assumes that you have already created your Oracle Autonomous Database 23ai Always Free instance and explored the database tools available for accessing your database environment, especialy SQL Developer Web.
 
 **Estimated Time: 10 minutes**
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Create a new database schema named **hol23**
 - Create a new APEX Workspace for developing our generative AI chatbot application
-- Copy LLM bytecode source files and corpus documents into your database's local DATA_PUMP_DIR directory for later processing
+- Copy LLM bytecode source files and corpus documents into your database's local **DATA\_PUMP\_DIR** directory for later processing
 
 ### Prerequisites
 
@@ -133,7 +133,7 @@ We will be using *Oracle Application Express* (APEX) to construct and execute ou
 
 ## Task 4: Transfer LLM bytecode files and corpus documents to accessible directory
 
-The files we need to create LLMs and construct a corpus of documents must reside within an accessible directory within our Autonomous Database. We'll use the **DBMS_CLOUD** package to transfer them from an OCI public object storage bucket to our database's DATA_PUMP_DIR directory.
+The files we need to create LLMs and construct a corpus of documents must reside within an accessible directory within our Autonomous Database. We'll use the **DBMS\_CLOUD** package to transfer them from an OCI public object storage bucket to our database's **DATA\_PUMP\_DIR** directory.
 
 1. Still connected as the **admin** user, open and execute the script named **copy-files-from-object-storage.sql** to initiate the transfer process. It should complete in less than two minutes.
 
@@ -154,7 +154,7 @@ The files we need to create LLMs and construct a corpus of documents must reside
 
    ![Confirm file transfer](./images/confirm-file-transfer.png)
 
-    You should observe that 11 files with a **.pdf** extension and two files with a **.onnx** extension now exist in the **DATA_PUMP_DIR** directory. We will use these files in the next two lessons.
+    You should observe that 11 files with a **.pdf** extension and two files with a **.onnx** extension now exist in the **DATA\_PUMP\_DIR** directory. We will use these files in the next two lessons.
 
 3. Unless otherwise instructed, we'll execute all remaining scripts logged in as the **hol23** user we've just created, so log out of the **admin** account. 
 

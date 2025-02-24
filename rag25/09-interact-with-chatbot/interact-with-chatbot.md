@@ -140,11 +140,15 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
     ![SMR Example Execution](images/SMR-example-execution.png)
 
-5. Let's see how the underlying code generates the prompt before submitting it to the OCI Generative AI service we've configured.  Edit Page 500 and expand the list of dynamic actions to review it:
+5. Let's see how the underlying code generates the prompt before submitting it to the OCI Generative AI service we've configured. Return to the APEX Edit Home page and then select the page named *500 - Social Media Responder* to edit it:
+
+    ![Page-500-00](images/SMR-edit-page-500.png)
+
+    From the left-hand-side menu that's displayed, drill down into the page's attributes, select the *Formulate* button, and then expand the list of its dynamic actions:
 
     ![Page-500-01](images/SMR-edit-dynamic-actions-menu.png)
 
-    - Click on the *Build Prompt* dynamic action and then open and expand the underlying *PL/SQL Function Body* that underlies it:
+    - Click on the *Build Prompt* dynamic action and then from the right-hand-side menu, open and expand the underlying *PL/SQL Function Body* that it actually executes:
 
     ![Page-500-02](images/SMR-expand-PLSQL.png)
 
@@ -165,13 +169,12 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 **You have now completed this Live Lab.** You may sign out of your Oracle 23ai ADB Always Free environment.
 
 ## Learn More
-* [Property Graph Developer’s Guide](https://docs.oracle.com/en/database/oracle/property-graph/)
 * [Using the APEX Graph Visualization Plug-In](https://docs.oracle.com/en/database/oracle/property-graph/23.3/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html)
-* [Oracle Graph JavaScript API Reference for Property Graph Visualization](https://docs.oracle.com/en/database/oracle/property-graph/23.4/pgjsd/index.html)
 * [APEX and Property Graphs in Oracle Database 23c (video)](https://www.youtube.com/watch?v=DODoJI3sR14)
-* [Oracle Graph Learning Path](https://blogs.oracle.com/database/post/oracle-graph-learning-path)
 * [Powering Network Topology Planning and Administration with Oracle Graph](https://blogs.oracle.com/database/post/powering-network-topology-planning-and-administration-with-oracle-graph)
-* [Oracle Graph on Medium](https://medium.com/tag/oracle-graph)
+* [Pretrained Foundational Models in Generative AI](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)
+* [Chat in OCI Generative AI](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm)
+* [APEX 24.1 APEX_AI Package](https://docs.oracle.com/en/database/oracle/apex/24.1/aeapi/APEX_AI.html)
 
 ## Scholarly Reading
 * [Fame for sale: Efficient detection of fake Twitter followers](https://www.sciencedirect.com/science/article/abs/pii/S0167923615001803)
