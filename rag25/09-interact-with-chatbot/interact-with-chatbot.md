@@ -53,9 +53,9 @@ Let's take a quick look at some of the messages that were exchanged within our s
 
 7. Sign out of the application. This will return focus to the APEX *Edit Page* window.
 
-![exitapplication](images/app-301-signout.png)
+![exitapplication](images/app-signout.png)
 
-Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled [finish]. It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
+Unfortunately, we have limited time within this lab to explore the myriad features of the GVT plug-in, but if you are interested in learning more about its capabilities, please sign up for the LiveLabs titled *You Down With OPG? Leveraging Operational Property Graphs in Oracle 23ai.* It performs a much deeper dive into how to leverage the extensive Operational Property Graph features of 23ai in concert with the Graph Visualization Toolkit.
 
 ## Task 2: Configure OCI Generative AI Services
 Now we'll configure our APEX application to use *OCI Generative AI* as its Generative AI Service provider.
@@ -140,7 +140,7 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
 
     ![SMR Example Execution](images/SMR-example-execution.png)
 
-5. Let's see how the underlying code generates the prompt before submitting it to the external OpenAI service we've configured.  Edit Page 500 and expand the list of dynamic actions to review it:
+5. Let's see how the underlying code generates the prompt before submitting it to the OCI Generative AI service we've configured.  Edit Page 500 and expand the list of dynamic actions to review it:
 
     ![Page-500-01](images/SMR-edit-dynamic-actions-menu.png)
 
@@ -156,7 +156,7 @@ Now we'll configure our APEX application to use *OCI Generative AI* as its Gener
     
     ![Page-500-03](images/SMR-buildprompt-code.png)
 
-    - Finally, the code that the *RenderAnswer* process executes submits the engineered prompt to the OpenAI AI service we've configured using the **APEX\_AI.GENERATE** procedure. OpenAI then uses the specified generative AI model - in our case, **gpt-4o** - to perform some additional refinement of the response before it's returned for human review.
+    - Finally, the code that the *RenderAnswer* process executes submits the engineered prompt to the OCI Generative AI service we've configured using the **APEX\_AI.GENERATE** procedure. OCI Generative AI then uses the specified generative AI model - in our case, **meta-llama-3.3-70b-instruct** - to perform some additional refinement of the response before it's returned for human review.
 
     ![Page-500-04](images/SMR-renderanswer-code.png)
 
